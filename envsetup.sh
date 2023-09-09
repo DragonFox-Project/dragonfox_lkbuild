@@ -21,6 +21,7 @@ export LKBUILD_TOP=$(pwd)
 
 function lunch () {
     cd $LKBUILD_TOP
+    vars_cleanup
 
     if [ -z "$1" ]; then
         echo "error: no device selected"
@@ -109,4 +110,10 @@ function breakfast () {
     LKBUILD_TARGET=$1
     mka sync
     mka sync_device
+}
+
+function vars_cleanup () {
+    unset $(compgen -v | grep -i "TARGET_")
+    unset $(compgen -v | grep -i "BOARD_")
+    unset $(compgen -v | grep -i "PRODUCT_")
 }
