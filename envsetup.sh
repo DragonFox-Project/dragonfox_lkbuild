@@ -116,4 +116,5 @@ function vars_cleanup () {
     unset $(compgen -v | grep -i "TARGET_")
     unset $(compgen -v | grep -i "BOARD_")
     unset $(compgen -v | grep -i "PRODUCT_")
+    unset $(compgen -v | grep -i "KERNEL_")
 }
