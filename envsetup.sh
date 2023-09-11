@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LKBUILD_VERSION="0.1"
+LKBUILD_VERSION="0.2"
 LKBUILD_JOBS=$(nproc --all)
 export LKBUILD_TOP=$(pwd)
 

@@ -35,4 +35,7 @@ function execute_target () {
     sync "https://github.com/LineageOS/android_prebuilts_tools-lineage" "prebuilts/tools-lineage" "lineage-20.0"
     sync "https://github.com/LineageOS/android_prebuilts_build-tools" "prebuilts/build-tools" "lineage-20.0"
     sync "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86" "prebuilts/clang/host/linux-x86"
+    sync "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" "lineage-19.1"
+    sync "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" "lineage-19.1"
+    sync "https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" "prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" "lineage-19.1"
 }

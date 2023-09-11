@@ -15,15 +15,14 @@
 # limitations under the License.
 #
 
-PRODUCT_DEVICE="gta4xl"
+PRODUCT_DEVICE="gta4xlwifi"
 PRODUCT_MANUFACTURER="samsung"
 
 TARGET_ARCH="arm64"
-TARGET_KERNEL_CONFIG="exynos9611-gta4xl_defconfig"
+TARGET_KERNEL_CONFIG="exynos9611-gta4xlwifi_twrp_defconfig"
 
 BOARD_KERNEL_IMAGE_NAME="Image"
 TARGET_KERNEL_CLANG_VERSION="r450784d"
-TARGET_KERNEL_NO_GCC=true
 
 function target_sync_sources () {
     sync "https://github.com/Harder258/dragonfox_kernel_samsung_gta4xl" "kernel/samsung/gta4xl" "lineage-20"
