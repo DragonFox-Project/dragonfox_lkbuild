@@ -2,7 +2,7 @@
 
 This is Little Kernel Build system made for building Linux kernels under DragonFox project
 
-> Work in progress, only clang kernels are supported as for now
+> Work in progress
 
 # Building
 
@@ -40,3 +40,4 @@ $ mka <build_target>
 > Currently supported devices are:
 - gta4xl
 - gta4xlwifi
+- spes
