@@ -15,9 +15,11 @@
 # limitations under the License.
 #
 
-LKBUILD_VERSION="0.2"
+LKBUILD_VERSION="0.2.1"
 LKBUILD_JOBS=$(nproc --all)
 export LKBUILD_TOP=$(pwd)
+export KBUILD_BUILD_USER=DragonFox
+export KBUILD_BUILD_HOST=LKBuild
 
 function lunch () {
     cd $LKBUILD_TOP
@@ -52,6 +54,7 @@ function lunch () {
 
 function mka () {
     cd $LKBUILD_TOP
+    vars_cleanup
 
     if [ -z "$LKBUILD_TARGET" ]; then
         echo "error: no device selected"

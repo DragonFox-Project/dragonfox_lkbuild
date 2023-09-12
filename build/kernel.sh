@@ -188,7 +188,8 @@ function execute_target () {
         PATH="${TARGET_KERNEL_CLANG_PATH}/bin:$PATH"
         if [ -z "$KERNEL_CC" ]; then
             CLANG_EXTRA_FLAGS="--cuda-path=/dev/null"
-            if $(${TARGET_KERNEL_CLANG_PATH}/bin/clang -v --hip-path=/dev/null >/dev/null 2>&1; echo $?); then
+            ${TARGET_KERNEL_CLANG_PATH}/bin/clang -v --hip-path=/dev/null >/dev/null 2>&1;
+            if [ $? -eq 0 ]; then
                 CLANG_EXTRA_FLAGS+=" --hip-path=/dev/null"
             fi;
             KERNEL_CC="CC=\"clang ${CLANG_EXTRA_FLAGS}\""
